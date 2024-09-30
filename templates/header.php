@@ -47,31 +47,17 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-            <?php if(isset($_SESSION['login'])): ?>
-            <li class="nav-item">
-                <a href="logout.php">
-                    <i class="fas fa-fw fa-power-off"></i>
-                <span>logout</span></a>
-            </li>
-
+            
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            <?php endif; ?>
+            
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-            <?php if(isset($_SESSION['login'])): 
-                ?>
-                <li class="nav-item">
-                    <a href="logout.php" class="nav-link">
-                        <i class="fa fa-fw fa-power-off"></i>
-                    <span>logout</span></a>
-                </li>
-            <?php endif; ?>
+
 
             <!-- Heading -->
             <!-- <div class="sidebar-heading">
@@ -185,6 +171,8 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li> -->
+            
+            
             <li class="nav-item">
                 <a class="nav-link" href="buku_tamu.php">
                     <i class="fas fa-fw fa-book"></i>
@@ -285,6 +273,7 @@
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </a>
+                                </div>
                         </li>
 
                     </ul>
