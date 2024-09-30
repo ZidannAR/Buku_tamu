@@ -1,3 +1,9 @@
+<?php 
+// session_start();
+// if(isset($_SESSION['login'])){
+    // header('location: index.php');
+    // var_dump($_SESSION);
+// } ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +47,12 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
+            <?php if(isset($_SESSION['login'])): ?>
+            <li class="nav-item">
+                <a href="logout.php">
+                    <i class="fas fa-fw fa-power-off"></i>
+                <span>logout</span></a>
+            </li>
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
@@ -48,9 +60,18 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+            <?php endif; ?>
 
             <!-- Divider -->
-            <!-- <hr class="sidebar-divider"> -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <?php if(isset($_SESSION['login'])): 
+                ?>
+                <li class="nav-item">
+                    <a href="logout.php" class="nav-link">
+                        <i class="fa fa-fw fa-power-off"></i>
+                    <span>logout</span></a>
+                </li>
+            <?php endif; ?>
 
             <!-- Heading -->
             <!-- <div class="sidebar-heading">
@@ -264,12 +285,6 @@
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
                         </li>
 
                     </ul>
